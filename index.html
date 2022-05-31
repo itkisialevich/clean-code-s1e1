@@ -11,53 +11,76 @@
   </head>
   <body class="body">
     <header class="header">
-      <img src="./eisenhower-matrix.jpg" alt="Eisenhower matrix" />
+      <img
+        class="header__img"
+        src="./eisenhower-matrix.jpg"
+        alt="Eisenhower matrix"
+      />
       <a
-        class="more-info"
+        class="header__link"
         href="https://goal-life.com/page/method/matrix-eisenhower"
-        >Want more details?
+      >
+        Want more details?
       </a>
     </header>
     <main class="main">
-      <section id="section-for-adding-element">
-        <label for="new-task">Add Item</label>
-        <div class="task-row-wrapper">
-          <input id="new-task" class="task" type="text" />
-          <button>Add</button>
+      <section class="section">
+        <h3 class="section__subtitle">Add Item</h3>
+        <div class="item">
+          <input
+            class="item__input task item__input_text item__input_new-task"
+            type="text"
+          />
+          <button class="item__btn">Add</button>
         </div>
       </section>
-      <h3 class="subtitle">Todo</h3>
-      <ul id="incomplete-tasks">
-        <li>
-          <input type="checkbox" /><label class="task">Pay Bills</label>
-          <input type="text" class="task" />
-          <button class="edit">Edit</button>
-          <button class="delete">
-            <img src="./remove.svg" alt="Button remove" />
-          </button>
-        </li>
-        <li class="edit-mode">
-          <input type="checkbox" /><label class="task">Go Shopping</label>
-          <input type="text" value="Go Shopping" class="task" />
-          <button class="edit">Save</button>
-          <button class="delete">
-            <img src="./remove.svg" alt="Button remove" />
-          </button>
-        </li>
-      </ul>
-      <h3 class="subtitle">Completed</h3>
-      <ul id="completed-tasks">
-        <li>
-          <input type="checkbox" checked /><label class="task"
-            >See the Doctor</label
-          >
-          <input type="text" class="task" />
-          <button class="edit">Edit</button>
-          <button class="delete">
-            <img src="./remove.svg" alt="Button remove" />
-          </button>
-        </li>
-      </ul>
+
+      <section class="section">
+        <h3 class="section__subtitle">Todo</h3>
+        <ul class="list list_todo">
+          <li class="item list__item">
+            <input type="checkbox" class="item__input item__input_checkbox" />
+            <label class="item__label">Pay Bills</label>
+            <input class="item__input task item__input_text" type="text" />
+            <button class="item__btn item__btn_edit">Edit</button>
+            <button class="item__btn item__btn_delete">
+              <img class="btn__img" src="./remove.svg" alt="Button remove" />
+            </button>
+          </li>
+          <li class="item list__item list__item_edit-mode">
+            <input class="item__input item__input_checkbox" type="checkbox" />
+            <label class="item__label item__label_edit-mode">Go Shopping</label>
+            <input
+              class="item__input item__input_text item__input_edit-mode"
+              type="text"
+              value="Go shopping"
+            />
+            <button class="item__btn item__btn_edit">Save</button>
+            <button class="item__btn item__btn_delete">
+              <img class="btn__img" src="./remove.svg" alt="Button remove" />
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3 class="section__subtitle">Completed</h3>
+        <ul class="list list_completed">
+          <li class="item list__item">
+            <input
+              class="item__input item__input_checkbox"
+              type="checkbox"
+              checked
+            />
+            <label class="item__label item__label">See the Doctor</label>
+            <input class="item__input item__input_text" type="text" />
+            <button class="item__btn item__btn_edit">Edit</button>
+            <button class="item__btn item__btn_delete">
+              <img class="btn__img" src="./remove.svg" alt="Button remove" />
+            </button>
+          </li>
+        </ul>
+      </section>
     </main>
     <script src="app.js"></script>
   </body>
